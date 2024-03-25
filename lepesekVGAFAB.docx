@@ -1,0 +1,31 @@
+A:git init
+git remote add origin URL
+git add index.html
+git commit -m "A1"
+git push origin master
+git pull origin fejlesztesB
+git checkout master
+git add index.html
+git commit -m "A2"
+git push origin master
+git checkout fejlesztesB
+git add index.html
+git commit -m "A3"
+git push origin fejlesztesB
+git checkout master
+git merge fejlesztesB
+
+
+B:git init
+git remote add origin URL
+git pull origin master
+git branch fejlesztesB
+git checkout fejlesztesB
+git add index.html
+git commit -m "B1"
+git push origin fejlesztesB
+git pull origin master
+git add index.html
+git commit -m "B2"
+git push origin master
+git pull origin fejlesztesB
