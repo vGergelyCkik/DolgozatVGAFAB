@@ -1,31 +1,34 @@
 A:git init
-git remote add origin URL
-git add index.html
-git commit -m "A1"
-git push origin master
-git pull origin fejlesztesB
-git checkout master
-git add index.html
-git commit -m "A2"
-git push origin master
-git checkout fejlesztesB
-git add index.html
-git commit -m "A3"
-git push origin fejlesztesB
-git checkout master
-git merge fejlesztesB
-
-
 B:git init
-git remote add origin URL
-git pull origin master
-git branch fejlesztesB
-git checkout fejlesztesB
-git add index.html
-git commit -m "B1"
-git push origin fejlesztesB
-git pull origin master
-git add index.html
-git commit -m "B2"
-git push origin master
-git pull origin fejlesztesB
+A:git remote add origin URL
+B:git remote add origin URL
+A:git add index.html
+A:git commit -m "A1"
+A:git push origin master
+B:git pull origin master
+B:git branch fejlesztesB
+B:git checkout fejlesztesB
+B:git add index.html
+B:git commit -m "B1"
+B:git push origin fejlesztesB
+A:git pull origin fejlesztesB
+A:git checkout master
+A:git add index.html
+A:git commit -m "A2"
+A:git push origin master
+B:git pull origin master
+A:git checkout fejlesztesB
+A:git add index.html
+A:git commit -m "A3"
+A:git push origin fejlesztesB
+B:git add index.html
+B:git commit -m "B2"
+B:git push origin master
+A:git checkout master
+A:git merge fejlesztesB
+A:git fetch
+A:git add .
+A:git commit -m "A5"
+A:git push origin master
+B:git pull origin fejlesztesB
+B:git push origin master
